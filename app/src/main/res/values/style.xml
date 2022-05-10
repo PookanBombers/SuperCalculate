@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Standard.Theme" parent="Theme.SuperCalculate">
+        <item name="android:background">@drawable/gradient_list</item>
+    </style>
+
+    <style name="Ocean.Theme" parent="Theme.SuperCalculate">
+        <item name="android:background">@drawable/gradient_list2</item>
+    </style>
+
+    <style name="CalcButtonStyle" parent="Standard.Theme">
+        <item name="android:background">@color/ghost</item>
+        <item name="android:textSize">@dimen/textSizeButton</item>
+        <item name="android:layout_marginStart">@dimen/marginStart</item>
+        <item name="android:layout_marginTop">@dimen/marginTop</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+</resources>

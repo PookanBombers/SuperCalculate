@@ -4,15 +4,200 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/mainLayout">
 
-    <TextView
+    <RadioGroup
+        android:id="@+id/radioButtons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/ghost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/standard"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/standard" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/ocean"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ocean" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/ghost"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:background="@color/ghost"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/clear"
+            style="@style/CalcButtonStyle"
+            android:text="@string/clear"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/zero"
+            style="@style/CalcButtonStyle"
+            android:layout_width="0dp"
+            android:text="@string/zero"
+            app:layout_constraintEnd_toEndOf="@+id/two"
+            app:layout_constraintStart_toEndOf="@+id/one"
+            app:layout_constraintStart_toStartOf="@+id/one"
+            app:layout_constraintTop_toBottomOf="@+id/two" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/point"
+            style="@style/CalcButtonStyle"
+            android:text="@string/point"
+            app:layout_constraintStart_toEndOf="@+id/zero"
+            app:layout_constraintTop_toBottomOf="@+id/three" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/equals"
+            style="@style/CalcButtonStyle"
+            android:text="@string/equals"
+            app:layout_constraintStart_toEndOf="@+id/point"
+            app:layout_constraintTop_toBottomOf="@+id/plus" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/one"
+            style="@style/CalcButtonStyle"
+            android:text="@string/one"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/four" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/two"
+            style="@style/CalcButtonStyle"
+            android:text="@string/two"
+            app:layout_constraintStart_toEndOf="@+id/one"
+            app:layout_constraintTop_toBottomOf="@+id/five" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/three"
+            style="@style/CalcButtonStyle"
+            android:text="@string/three"
+            app:layout_constraintStart_toEndOf="@+id/two"
+            app:layout_constraintTop_toBottomOf="@+id/six" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/plus"
+            style="@style/CalcButtonStyle"
+            android:text="@string/plus"
+            app:layout_constraintStart_toEndOf="@+id/three"
+            app:layout_constraintTop_toBottomOf="@+id/minus" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/four"
+            style="@style/CalcButtonStyle"
+            android:text="@string/four"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seven" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/five"
+            style="@style/CalcButtonStyle"
+            android:text="@string/five"
+            app:layout_constraintStart_toEndOf="@+id/four"
+            app:layout_constraintTop_toBottomOf="@+id/eight" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/six"
+            style="@style/CalcButtonStyle"
+            android:text="@string/six"
+            app:layout_constraintStart_toEndOf="@+id/five"
+            app:layout_constraintTop_toBottomOf="@+id/nine" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/minus"
+            style="@style/CalcButtonStyle"
+            android:text="@string/minus"
+            app:layout_constraintStart_toEndOf="@+id/six"
+            app:layout_constraintTop_toBottomOf="@+id/multiply" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/seven"
+            style="@style/CalcButtonStyle"
+            android:text="@string/seven"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clear" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/eight"
+            style="@style/CalcButtonStyle"
+            android:text="@string/eight"
+            app:layout_constraintStart_toEndOf="@+id/seven"
+            app:layout_constraintTop_toBottomOf="@+id/delete" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/nine"
+            style="@style/CalcButtonStyle"
+            android:text="@string/nine"
+            app:layout_constraintStart_toEndOf="@+id/eight"
+            app:layout_constraintTop_toBottomOf="@+id/percent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/multiply"
+            style="@style/CalcButtonStyle"
+            android:text="@string/multiply"
+            app:layout_constraintStart_toEndOf="@+id/nine"
+            app:layout_constraintTop_toBottomOf="@+id/divide" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/delete"
+            style="@style/CalcButtonStyle"
+            android:text="@string/delete"
+            app:layout_constraintStart_toEndOf="@+id/clear"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/percent"
+            style="@style/CalcButtonStyle"
+            android:text="@string/percent"
+            app:layout_constraintStart_toEndOf="@+id/delete"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/divide"
+            style="@style/CalcButtonStyle"
+            android:text="@string/divide"
+            app:layout_constraintStart_toEndOf="@+id/percent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
