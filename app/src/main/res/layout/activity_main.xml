@@ -24,11 +24,11 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/ghost"
-        android:textSize="24sp"
+        android:textSize="32sp"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,11 +88,12 @@
             app:layout_constraintTop_toBottomOf="@+id/three" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/equals"
+            android:id="@+id/equal"
             style="@style/CalcButtonStyle"
-            android:text="@string/equals"
+            android:text="@string/equal"
             app:layout_constraintStart_toEndOf="@+id/point"
             app:layout_constraintTop_toBottomOf="@+id/plus" />
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/one"

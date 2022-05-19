@@ -2,10 +2,15 @@ package ru.gp.supercalculate;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.button.MaterialButton;
+
 public abstract class BaseActivity extends AppCompatActivity {
+
+
 
     // Имя настроек
     private static final String NameSharedPreference = "LOGIN";
@@ -19,7 +24,12 @@ public abstract class BaseActivity extends AppCompatActivity {
         // Устанавливать тему надо только до установки макета активити
         setTheme(getAppTheme(R.style.Standard_Theme));
         super.onCreate(savedInstanceState);
+
+
     }
+
+
+
     protected int getAppTheme(int codeStyle) {
         return codeStyleToStyleId(getCodeStyle(codeStyle));
     }

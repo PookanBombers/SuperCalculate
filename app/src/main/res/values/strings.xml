@@ -18,16 +18,17 @@
     <string name="minus">-</string>
     <string name="multiply">˟</string>
     <string name="divide">÷</string>
-    <string name="equals">=</string>
+    <string name="equal">=</string>
     <string name="percent">%</string>
     <string name="point">.</string>
     <string name="clear">AC</string>
-    <string name="delete">«</string>
+    <string name="delete">^</string>
 
     <string name="standard">Standard Theme</string>
     <string name="ocean">Ocean Theme</string>
     <string name="theme">Theme</string>
     <string name="back">Back</string>
+
 
 
 </resources>
